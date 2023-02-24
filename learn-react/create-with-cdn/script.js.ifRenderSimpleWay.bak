@@ -1,0 +1,30 @@
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+
+// falsy 表达式
+// function Mailbox(props) {
+//   const unreadMessages = props.unreadMessage;
+//   return (
+//     <div>
+//       <h1>Hello!</h1>
+//       {unreadMessages.length > 0 && (
+//         <h2>You have {unreadMessages.length} unread messages.</h2>
+//       )}
+//     </div>
+//   );
+// }
+
+// const message = ["React", "Re: React", "Re:Re: React"];
+ 
+
+//三目运算符
+render(){
+  const isLoggedIn = this.state.isLoggedIn;
+  return(
+    <div>
+      The User is <b>{isLoggedIn ? 'currently' : 'not'}</b> logged in.
+    </div>
+  )
+}
+
+root.render(<Mailbox unreadMessage={message} />);

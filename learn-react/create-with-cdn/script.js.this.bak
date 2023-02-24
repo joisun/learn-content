@@ -1,0 +1,33 @@
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+class Toggle extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { isToggleOn: true };
+
+    // 为了在回调中使用 `this`, 这个绑定时必不可少的
+    // this.handleClick = this.handleClick.bind(this);
+  }
+
+  // handleClick = function () {
+  //   console.log(this, "--line13");
+  // };
+
+  handleClick() {
+    console.log(this, "--line14");
+    this.setState((prevState) => ({
+      isToggleOn: !prevState.isToggleOn,
+    }));
+  }
+
+  render() {
+    return (
+      <button onClick={() => this.handleClick()}>
+        {this.state.isToggleOn ? "ON" : "OFF"}
+      </button>
+    );
+  }
+}
+
+const ele = <Toggle />;
+root.render(ele);
