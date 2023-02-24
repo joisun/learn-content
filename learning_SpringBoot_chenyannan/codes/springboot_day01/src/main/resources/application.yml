@@ -1,0 +1,6 @@
+server:
+  port: 8081 # 修改内嵌服务器端口号
+
+spring:
+  profiles:
+    active: dev #让dev环境生效

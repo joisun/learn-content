@@ -1,0 +1,14 @@
+server:
+  port: 9999
+spring:
+  mvc:
+    hiddenmethod:
+      filter:
+        enabled: true
+
+#  mvc:
+#    static-path-pattern: /res/**
+
+#  web:
+#    resources:
+#      static-locations: [classpath:/abc/]

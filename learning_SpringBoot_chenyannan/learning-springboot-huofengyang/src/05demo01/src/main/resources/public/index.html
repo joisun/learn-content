@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Hello ~~~ 歪比巴布 ~~ </h1>
+<form action="/user" method="get">
+
+    <label for="a">Get: </label>
+    <input type="text" id="a">
+
+    <input type="submit" value="Send Get">
+
+</form>
+<form action="/user" method="post">
+
+    <label for="b">Post: </label>
+    <input type="text" id="b">
+
+    <input type="submit" value="Send Post">
+
+</form>
+<form action="/user" method="post">
+
+    <label for="c">DELETE: </label>
+    <input name="_method" type="hidden" value="DELETE">
+    <input type="text" id="c">
+
+    <input type="submit" value="Send Delete">
+
+</form>
+<form action="/user" method="post">
+
+    <label for="d">PUT: </label>
+    <input name="_method" type="hidden" value="PUT">
+    <input type="text" id="d">
+
+    <input type="submit" value="Send Put">
+
+</form>
+</body>
+</html>
