@@ -1,0 +1,158 @@
+### 1. 事件
+
+触发一个基本的点击事件
+
+```js
+function test() {
+  const clickHandler = () => {
+    console.log('hello react!');
+  };
+  return <button onClick={clickHandler}>click</button>;
+}
+
+export default test;
+```
+
+#### Todolist 示例
+
+```js
+// App.js
+...
+      {todoItems.map((it, index) => (
+        <Todo
+          key={index}
+          text={it.project}
+          onDelete={() => deleteHandler(index)}
+        />
+      ))}
+...
+```
+
+> 假设有一个todo列表，每个列表项都有一个删除按钮，如何复用事件？
+>
+> 将删除事件的handler 通过props 传入列表项
+
+```js
+// Todo.js
+export default function (props) {
+  const { text } = props;
+  return (
+    <div>
+      <li>todo:{text}</li>
+      <button onClick={props.onDelete}>delete</button>
+    </div>
+  );
+}
+```
+
+> 接收 props, 让每一个todo 项中都能触发删除事件
+
+这体现了 React 的单向数据流，不同于 Vue, 在 Vue 中，同样的示例如下：
+
+**src/pages/TodoList/index.vue**
+
+```vue
+<script setup lang="ts">
+import Todo from '@/components/Todo/index.vue';
+import { ref } from 'vue';
+const list = ref([
+  { id: '1', project: 'Learn React' },
+  { id: '2', project: 'Master React' },
+  { id: '3', project: 'Explore the full React Course' },
+]);
+const handleDeleteEmit = (id) => {
+  let index = list.value.findIndex((it) => it.id === id);
+  list.value.splice(index, 1);
+};
+</script>
+<template>
+  <div class="todo-list">
+    <Todo
+      v-for="item in list"
+      :todo="item"
+      :key="item.id"
+      @delete="handleDeleteEmit"
+    />
+  </div>
+</template>
+```
+
+**src/components/Todo/index.vue**
+
+```vue
+<script setup lang="ts">
+import { defineEmits } from 'vue';
+defineProps({
+  todo: {
+    type: Object,
+    default: () => {},
+  },
+});
+
+const emit = defineEmits(['delete']);
+
+const handleDelete = (id) => {
+  emit('delete', id);
+};
+</script>
+<template>
+  <div>
+    <li>{{ todo.project }}</li>
+    <button @click="handleDelete(todo.id)">delete</button>
+  </div>
+</template>
+```
+
+> 在vue  中，需要在 todo 项中，通过 emit 去触发上层组件中的事件。
+
+但是，此外，vue 中，也支持 React 类似的方式，将事件通过 props 下传:
+
+```vue
+//src/pages/TodoList/index.vue
+<script setup lang="ts">
+import Todo from '@/components/Todo/index.vue';
+import { ref } from 'vue';
+const list = ref([
+  { id: '1', project: 'Learn React' },
+  { id: '2', project: 'Master React' },
+  { id: '3', project: 'Explore the full React Course' },
+]);
+const handleDeleteEmit = (id) => {
+  let index = list.value.findIndex((it) => it.id === id);
+  list.value.splice(index, 1);
+};
+</script>
+<template>
+  <div class="todo-list">
+    <Todo
+      v-for="item in list"
+      :todo="item"
+      :key="item.id"
+      :deleteEvent="handleDeleteEmit"
+    />
+  </div>
+</template>
+```
+
+```vue
+//src/components/Todo/index.vue
+<script setup lang="ts">
+defineProps({
+  todo: {
+    type: Object,
+    default: () => {},
+  },
+  deleteEvent: {
+    type: Function,
+    default: () => {},
+  },
+});
+</script>
+<template>
+  <div>
+    <li>{{ todo.project }}</li>
+    <button @click="deleteEvent(todo.id)">delete</button>
+  </div>
+</template>
+```
+
