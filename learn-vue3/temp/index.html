@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <input id="input" oninput="handleInput(this)" />
+    <p id="bindText">123</p>
+    <script>
+      const input = document.querySelector('#input');
+      const text = document.querySelector('#bindText');
+
+      const data = {};
+      const proxy = new Proxy(data, {
+        set: function (t, k, r) {
+          t[k] = r;
+          text.textContent = t[k];
+          input.value = t[k];
+        },
+        get: function () {
+          return Reflect.get;
+        },
+      });
+
+      const handleInput = (e) => {
+        proxy.field = e.value;
+      };
+
+      setInterval(() => {
+        proxy.field = new Date();
+      }, 1000);
+    </script>
+  </body>
+</html>

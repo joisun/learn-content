@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <input id="input1" oninput="handleInput(this)" />
+    <input id="input2" oninput="handleInput(this)" />
+    <input id="input3" oninput="handleInput(this)" />
+    <p id="bindText1">123</p>
+    <p id="bindText2">123</p>
+    <p id="bindText3">123</p>
+    <script>
+      // const input = document.querySelector('#input');
+      // const text = document.querySelector('#bindText');
+
+      const data = { field1: "", field2: "", field3: "" };
+      for (let f in data) {
+        Object.defineProperty(data, f, {
+          set: function (v) {
+            console.log(f, "--line23"); // field3 //field3 //field3
+            data[f + "_"] = v;
+
+            document.querySelector(`#bindText${f.at(-1)}`).textContent = v;
+          },
+          get: function () {
+            return data[f + "_"];
+          },
+        });
+      }
+
+      const handleInput = (e) => {
+        const ind = e.id.at(-1);
+        console.log("field" + ind, "--line45"); //field1 //field2 //field3
+        data["field" + ind] = e.value;
+        console.log(data);
+        // data.field = e.value;
+      };
+
+      // setInterval(() => {
+      //   data.field = new Date();
+      // }, 1000);
+    </script>
+  </body>
+</html>
