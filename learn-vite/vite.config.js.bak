@@ -1,0 +1,15 @@
+import { defineConfig } from 'vite';
+import prod from './config/vite.prod.config';
+import dev from './config/vite.dev.config';
+
+const config = defineConfig(({ command }) => {
+  if (command === 'build') {
+    // 生产状态
+    return prod;
+  } else {
+    // 开发状态
+    return dev;
+  }
+});
+
+export default config;
