@@ -2,7 +2,7 @@ https://www.bilibili.com/video/BV1pu411z7e1?spm_id_from=333.337.search-card.all.
 
 [toc]
 
-## 1. 特性
+## 1. 特性w
 
 Pinia 具有以下几点特性：
 
