@@ -7,14 +7,14 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "docs:dev": "vitepress dev",
     "docs:build": "vitepress build",
-    "docs:preview": "vitepress preview",
-    "docs:g": "ts-node scripts/generateMenu"
+    "docs:preview": "vitepress preview"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "ts-node": "^10.9.1",
-    "vitepress": "1.0.0-rc.31"
+    "vitepress": "1.0.0-rc.31",
+    "vitepress-sidebar": "^1.18.0"
   }
 }
