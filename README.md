@@ -15,3 +15,5 @@ contents 下目录结构应该形如：
   - 学习资料来源2
   - 学习资料来源3
   - ...
+
+  same change test
