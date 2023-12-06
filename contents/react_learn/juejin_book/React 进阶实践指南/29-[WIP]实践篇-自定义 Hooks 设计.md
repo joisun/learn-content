@@ -67,7 +67,7 @@ const [ xxx , ... ] = useXXX(参数A,参数B...)
 
 
 
-![1.jpg](img/29/1.image)
+![1.jpg](img/29/1.jpg)
 
 #### ② 顺序原则
 
@@ -273,7 +273,7 @@ export default function Index(){
 
 效果：
 
-![3.gif](img/29/2.image)
+![3.gif](img/29/2.jpg)
 
 **组合state**
 
@@ -417,7 +417,7 @@ export default function Home(){
 效果：
 
 
-![2.gif](img/29/3.image)
+![2.gif](img/29/3.jpg)
 
 
 * 当动态监听 props.a ，props.a 变化，监听函数执行。

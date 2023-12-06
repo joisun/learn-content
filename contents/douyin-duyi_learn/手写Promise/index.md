@@ -221,7 +221,7 @@ class MyPromise {
     };
     executor(resolve, reject);
   }
-
+</pre>  
 
 
 

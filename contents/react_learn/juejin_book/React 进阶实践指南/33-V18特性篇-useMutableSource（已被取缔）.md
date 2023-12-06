@@ -24,10 +24,10 @@
 常规模式下，先把外部数据 external Data 通过 selector 选择器把组件需要的数据映射到 state | props 上。这算是完成了一步，接下来还需要 subscribe 订阅外部数据源的变化，如果发生变化，那么还需要自身去强制更新 forceUpdate 。下面两幅图表示数据注入和数据订阅更新。
 
 
-![1.jpg](img/33/1.image)
+![1.jpg](img/33/1.jpg)
 
 
-![2.jpg](img/33/2.image)
+![2.jpg](img/33/2.jpg)
 
 典型的外部数据源就是 redux 中的 store ，redux 是如何把 Store 中的 state ，安全的变成组件的 state 的。 
 
@@ -225,7 +225,7 @@ function useSelector(selector) {
 
 这里还是采用 redux 和 createMutableSource 实现外部数据源的引用。这里使用的是 `18.0.0-alpha` 版本的 `react` 和 `react-dom` 。
 
-![3.jpg](img/33/3.image)
+![3.jpg](img/33/3.jpg)
 
 ````js
 import  React , {
@@ -282,7 +282,7 @@ export default function Index(){
 接下来让我们看一下效果：
 
 
-![4.gif](img/33/4.image)
+![4.gif](img/33/4.jpg)
 
 
 ## 四 原理分析

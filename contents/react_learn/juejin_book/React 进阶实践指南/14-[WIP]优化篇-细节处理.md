@@ -31,7 +31,7 @@ export default class Index extends React.Component{
 ````
 * 如上，当点击按钮的时候，向服务端发起数据交互；输入 input 时候，同样会向服务端进行数据交互，请求搜索的数据。对于如上的情况如果不做任何优化处理的话，连续点击按钮，或者 input 输入内容的时候，就会出现这种情况。
 
-![1.gif](img/14/1.image)
+![1.gif](img/14/1.jpg)
 
 
 如上，会频繁和服务端交互，很显然这种情况是不符合常理的。所以需要防抖处理。
@@ -45,7 +45,7 @@ constructor(props){
 ````
 效果：
 
-![2.gif](img/14/2.image)
+![2.gif](img/14/2.jpg)
 
 
 
@@ -77,7 +77,7 @@ export default function Index(){
 
 瘦身前体积：
 
-![pre](img/14/3.image)
+![pre](img/14/3.jpg)
 
 
 .babelrc 增加对 antd 样式按需引入。
@@ -92,7 +92,7 @@ export default function Index(){
 
 瘦身后体积：
 
-![after](img/14/4.image)
+![after](img/14/4.jpg)
 
 
 ### 3 React动画
@@ -135,7 +135,7 @@ export default function Index(){
 效果
 
 
-![3.gif](img/14/5.image)
+![3.gif](img/14/5.jpg)
 
 这种方式是我最优先推荐的方式，这种方式既不需要频繁 setState ，也不需要改变 DOM 。
 
@@ -191,7 +191,7 @@ export default function Index(){
 **效果**
 
 
-![4.gif](img/14/6.image)
+![4.gif](img/14/6.jpg)
 
 ### 4 及时清除定时器/延时器/监听器
 

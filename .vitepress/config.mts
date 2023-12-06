@@ -20,6 +20,7 @@ export default defineConfig({
   description: "personal learning content",
   srcDir:'contents',
   base:"/learn-content/", //https://vitepress.dev/reference/site-config#base
+  ignoreDeadLinks: true,
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [

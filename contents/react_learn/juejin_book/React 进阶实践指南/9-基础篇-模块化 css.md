@@ -74,12 +74,12 @@ export default ()=> <div>
 **效果**
 
 
-![css1.jpg](img/9/1.image)
+![css1.jpg](img/9/1.jpg)
 
 **首先来看看样式类名被编译成什么？**
 
 
-![css2.jpg](img/9/2.image)
+![css2.jpg](img/9/2.jpg)
 
 如上，可以看到 css-loader 将 text 变成了全局唯一的类名 `_1WHQzhI7PwBzQ_NMib7jy6`。这样有效的避免了样式冲突，全局类名污染的情况。
 
@@ -105,7 +105,7 @@ export default ()=> <div>
 }
 ````
 
-![css3.jpg](img/9/3.image)
+![css3.jpg](img/9/3.jpg)
 
 此时类名变成了， `src-pages-cssModule-style__text--1WHQz `，这个命名规则意义如下 
 
@@ -135,7 +135,7 @@ export default ()=><div>
 
 效果：
 
-![css4.jpg](img/9/4.image)
+![css4.jpg](img/9/4.jpg)
 
 这样就可以正常渲染组件样式了。
 
@@ -247,7 +247,7 @@ export default ()=><div>
 **效果：**
 
 
-![css5.jpg](img/9/5.image)
+![css5.jpg](img/9/5.jpg)
 
 ### 5 组合方案
 
@@ -272,7 +272,7 @@ export default ()=><div>
 效果：
 
 
-![css6.jpg](img/9/6.image)
+![css6.jpg](img/9/6.jpg)
 
 
 ### 6 动态添加class
@@ -315,7 +315,7 @@ export default function Index(){
 效果：
 
 
-![css11.gif](img/9/7.image)
+![css11.gif](img/9/7.jpg)
 
 通过 CSS Modules 配合 classNames 灵活的实现了样式的动态加载。
 
@@ -372,7 +372,7 @@ export default {
 效果：
 
 
-![css7.jpg](img/9/8.image)
+![css7.jpg](img/9/8.jpg)
 
 ### 2 灵活运用
 
@@ -442,7 +442,7 @@ export default function Index(){
 效果：
 
 
-![css8.jpg](img/9/9.image)
+![css8.jpg](img/9/9.jpg)
 
 **基于 props 动态添加样式**
 
@@ -470,7 +470,7 @@ export default function Index(){
 效果：
 
 
-![css9.jpg](img/9/10.image)
+![css9.jpg](img/9/10.jpg)
 
 
 **继承样式**
@@ -491,7 +491,7 @@ export default function Index(){
 效果：
 
 
-![css10.jpg](img/9/11.image)
+![css10.jpg](img/9/11.jpg)
 
  style-components 还有一些其他的功能，这里我就不一一介绍了，感兴趣的同学可以了解一下官网。[styled-components](https://styled-components.com/docs/basics#extending-styles)
  

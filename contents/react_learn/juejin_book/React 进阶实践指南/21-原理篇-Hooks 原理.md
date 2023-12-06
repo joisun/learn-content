@@ -31,7 +31,7 @@
 之前章节讲过，类组件的状态比如 state ，context ，props 本质上是存在类组件对应的 fiber 上，包括生命周期比如 componentDidMount ，也是以副作用 effect 形式存在的。那么 Hooks 既然赋予了函数组件如上功能，所以 hooks 本质是离不开函数组件对应的 fiber 的。 hooks 可以作为函数组件本身和函数组件对应的 fiber 之间的沟通桥梁。
 
 
-![hook1.jpg](img/21/1.image)
+![hook1.jpg](img/21/1.jpg)
 
 hooks 对象本质上是主要以三种处理策略存在 React 中：
 * 1 `ContextOnlyDispatcher`：  第一种形态是防止开发者在函数组件外部调用 hooks ，所以第一种就是报错形态，只要开发者调用了这个形态下的 hooks ，就会抛出异常。
@@ -117,7 +117,7 @@ export default function Index(){
 效果：
 
 
-![hook2.jpg](img/21/2.image)
+![hook2.jpg](img/21/2.jpg)
 
 ### hooks更新
 
@@ -140,14 +140,14 @@ export default function Index({ showNumber }){
 
 
 
-![hook3.jpeg](img/21/3.image)
+![hook3.jpeg](img/21/3.jpg)
 
 第二次复用时候已经发现 hooks 类型不同 `useState !== useRef` ，那么已经直接报错了。所以开发的时候一定注意 hooks 顺序一致性。
 
 报错内容：
 
 
-![hookk4.jpg](img/21/4.image)
+![hookk4.jpg](img/21/4.jpg)
  
 ## 三 状态派发
 useState 解决了函数组件没有 state 的问题，让无状态组件有了自己的状态，useState 在 state 章节已经说了基本使用，接下来重点介绍原理使用， useState 和 useReducer 原理大同小异，本质上都是触发更新的函数都是 dispatchAction。
@@ -243,7 +243,7 @@ function updateReducer(){
 
 用一幅图来描述整个流程。
 
-![hook5.jpg](img/21/5.image)
+![hook5.jpg](img/21/5.jpg)
  
 ## 四 处理副作用
 
@@ -287,7 +287,7 @@ React.useEffect(()=>{
 
 
 
-![hook6.jpg](img/21/6.image)
+![hook6.jpg](img/21/6.jpg)
 
 ### 更新
 

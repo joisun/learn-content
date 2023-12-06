@@ -75,7 +75,7 @@ class Root {
 
 模型图如下：
 
-![2.jpg](img/24/1.image)
+![2.jpg](img/24/1.jpg)
 
 **⑤引用类型处理**
 
@@ -267,7 +267,7 @@ class ComponentB extends React.Component{ /* 组件B */
 效果：
 
 
-![1.gif](img/24/2.image)
+![1.gif](img/24/2.jpg)
 
 
 ## 四 Mobx流程分析和原理揭秘
@@ -409,7 +409,7 @@ class ObservableObjectAdministration{
 到此为止，形成了如下的模型图结构：
 
 
-![3.jpg](img/24/3.image)
+![3.jpg](img/24/3.jpg)
 
 ### 2 依赖收集
 
@@ -659,7 +659,7 @@ function bindDependencies(Reaction){ /* 当前组件的 Reaction */
 依赖收集流程图：
 
 
-![4.jpeg](img/24/4.image)
+![4.jpeg](img/24/4.jpg)
 
 ### 3 派发更新
 
@@ -706,7 +706,7 @@ function runReactions(){
 状态派发流程图：
 
 
-![5.jpeg](img/24/5.image)
+![5.jpeg](img/24/5.jpg)
 
 
 ## 五 Mobx与Redux区别

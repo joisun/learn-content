@@ -157,7 +157,7 @@ export default function App(){
 
 **常规模式下效果：**
 
-![1.gif](img/34/1.image)
+![1.gif](img/34/1.jpg)
 
 * 可以清楚的看到在常规模式下，输入内容，内容呈现都变的异常卡顿，给人一种极差的用户体验。
 
@@ -165,13 +165,13 @@ export default function App(){
 **transtion 模式下效果：**
 
 
-![2.gif](img/34/2.image)
+![2.gif](img/34/2.jpg)
 
 * 把大量并发任务通过 startTransition 处理之后，可以清楚看到，input 会正常的呈现，更新列表任务变得滞后，不过用户体验大幅度提升，
 
 **整体效果：**
 
-![3.gif](img/34/3.image)
+![3.gif](img/34/3.jpg)
 
 * 来感受一些 startTransition 的魅力。
 
@@ -195,7 +195,7 @@ const handleChange=()=>{
 * 这里通过 setTimeout ，把更新放在 setTimeout 内部，那么我们都知道 setTimeout 是属于延时器任务，它不会阻塞浏览器的正常绘制，浏览器会在下次空闲时间之行 setTimeout 。那么效果如何呢？我们来看一下：
 
 
-![4.gif](img/34/4.image)
+![4.gif](img/34/4.jpg)
 
 * 如上可以看到，通过 setTimeout 确实可以让输入状态好一些，但是由于 setTimeout 本身也是一个宏任务，而每一次触发 onchange 也是宏任务，所以 setTimeout 还会影响页面的交互体验。
 
@@ -220,7 +220,7 @@ const handleChange = (e) => {
 * 如上将 setSearchQuery 防抖处理。然后我们看一下效果。
 
 
-![5.gif](img/34/5.image)
+![5.gif](img/34/5.jpg)
 
 通过上面可以直观感受到通过防抖处理后，基本上已经不影响 input 输入了。但是面临一个问题就是 list 视图改变的延时时间变长了。那么 transition 和**节流防抖** 本质上的区别是：
 
@@ -237,22 +237,22 @@ transition 在处理慢的计算机上效果更加明显，我们来看一下 [R
 * 处理性能高，更快速的设备上。不使用 startTransition 。
 
 
-![12.gif](img/34/6.image)
+![12.gif](img/34/6.jpg)
 
 * 处理性能高，更快速的设备上。使用 startTransition。
 
 
-![13.gif](img/34/7.image)
+![13.gif](img/34/7.jpg)
 
 * 处理性能差，慢速的设备上，不使用 startTransition。
 
 
-![14.gif](img/34/8.image)
+![14.gif](img/34/8.jpg)
 
 * 处理性能差，慢速的设备上，使用 startTransition。
 
 
-![15.gif](img/34/9.image)
+![15.gif](img/34/9.jpg)
 
 ## 三 transition 特性
 
@@ -334,7 +334,7 @@ export default function App(){
 接下来看一下效果：
 
 
-![6.gif](img/34/10.image)
+![6.gif](img/34/10.jpg)
 
 
 可以看到能够准确捕获到过渡期间的状态。
@@ -377,7 +377,7 @@ export default function App(){
 
 效果：
 
-![7.gif](img/34/11.image)
+![7.gif](img/34/11.jpg)
 
 
 ## 四 原理
@@ -410,7 +410,7 @@ export function startTransition(scope) {
 其原理图如下所示。
 
 
-![9.jpg](img/34/12.image)
+![9.jpg](img/34/12.jpg)
 
 ### 2 useTranstion
 
@@ -442,7 +442,7 @@ function mountTransition(){
 其原理图如下所示。
 
 
-![10.jpg](img/34/13.image)
+![10.jpg](img/34/13.jpg)
 
 ### 3 useDeferredValue
 
@@ -473,7 +473,7 @@ useDeferredValue 处理流程是这样的。
 其原理图如下所示。
 
 
-![11.jpg](img/34/14.image)
+![11.jpg](img/34/14.jpg)
 
 ## 四 总结
 

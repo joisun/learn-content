@@ -14,7 +14,7 @@
 
    新建项目：
 
-   ![2022-05-10_155511](05%20Web%E5%BC%80%E5%8F%91-%E9%99%84%E5%BD%95demo.assets/2022-05-10_155511-16522325025061.png)
+   ![2022-05-10_155511](./05%20Web%E5%BC%80%E5%8F%91-%E9%99%84%E5%BD%95demo.assets/2022-05-10_155511-16522325025061.png)
 
    修改:[src/main/resources/application.properties](#) 为 [src/main/resources/application.yml](#).
 
@@ -88,7 +88,7 @@
 
    放入样例图片后直接启动主程序：
 
-   ![image-20220510165512199](05%20Web%E5%BC%80%E5%8F%91-%E9%99%84%E5%BD%95demo.assets/image-20220510165512199.png)
+   ![image-20220510165512199](./05%20Web%E5%BC%80%E5%8F%91-%E9%99%84%E5%BD%95demo.assets/image-20220510165512199.png)
 
    测试访问：[http://localhost:9999/a103.jpg]() 、[http://localhost:9999/a108.jpg]()  、[http://localhost:9999/a151.gif]()  、[http://localhost:9999/a158.gif]()  都可以正常访问。
 
@@ -102,7 +102,7 @@
 
    测试：
 
-   ![image-20220510170644177](05%20Web%E5%BC%80%E5%8F%91-%E9%99%84%E5%BD%95demo.assets/image-20220510170644177.png)
+   ![image-20220510170644177](./05%20Web%E5%BC%80%E5%8F%91-%E9%99%84%E5%BD%95demo.assets/image-20220510170644177.png)
 
 2. 修改静态资源访问规则
 
@@ -118,7 +118,7 @@
          static-path-pattern: /res/**
      ```
 
-     ![image-20220510171801962](05%20Web%E5%BC%80%E5%8F%91-%E9%99%84%E5%BD%95demo.assets/image-20220510171801962-16521742829451.png)
+     ![image-20220510171801962](./05%20Web%E5%BC%80%E5%8F%91-%E9%99%84%E5%BD%95demo.assets/image-20220510171801962-16521742829451.png)
 
    - 修改资源路径
 
@@ -136,6 +136,6 @@
            static-locations: [classpath:/abc/]
      ```
 
-     <img src="05%20Web%E5%BC%80%E5%8F%91-%E9%99%84%E5%BD%95demo.assets/2022-05-11_090351.png" alt="2022-05-11_090351"  />
+     <img src="./05%20Web%E5%BC%80%E5%8F%91-%E9%99%84%E5%BD%95demo.assets/2022-05-11_090351.png" alt="2022-05-11_090351"  />
 
      

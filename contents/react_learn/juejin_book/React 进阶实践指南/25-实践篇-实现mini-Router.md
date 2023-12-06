@@ -26,7 +26,7 @@
 ### 2 设计功能图
 
 
-![2.jpg](img/25/1.image)
+![2.jpg](img/25/1.jpg)
 
 ## 三 代码实现
 
@@ -385,7 +385,7 @@ export default function  Index() {
 ### 效果
 
 
-![1.gif](img/25/2.image)
+![1.gif](img/25/2.jpg)
 
 ## 五 总结
 

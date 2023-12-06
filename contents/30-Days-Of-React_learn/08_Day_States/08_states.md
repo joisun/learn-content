@@ -196,7 +196,7 @@ class App extends React.Component {
       'https://static.onecms.io/wp-content/uploads/sites/12/2015/04/dogs-pembroke-welsh-corgi-400x400.jpg'
     let catURL =
       'https://www.smithsstationah.com/imagebank/eVetSites/Feline/01.jpg'
-    let image = this.state.image === catURL ? dogURL : catURL
+    let image = this.state.jpg === catURL ? dogURL : catURL
     this.setState({ image })
   }
 
@@ -207,7 +207,7 @@ class App extends React.Component {
       <div className='App'>
         <h1>30 Days Of React</h1>
         <div className='animal'>
-          <img src={this.state.image} alt='animal' />
+          <img src={this.state.jpg} alt='animal' />
         </div>
 
         <button onClick={this.changeAnimal} class='btn btn-add'>

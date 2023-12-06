@@ -161,7 +161,7 @@ function propagateContextChange(workInProgress,context){
 那么总结一下流程，当 Provider 的 value 更新之后，Provider 下面的只要有消费了 context 的类组件，就会触发强制更新。这也就解释了最开始的问题——**context 更新，如何避免 `pureComponent` ， `shouldComponentUpdate` 渲染控制策略的影响。** 用一幅流程图表示：
 
 
-![context7.jpg](img/31/1.image)
+![context7.jpg](img/31/1.jpg)
 
 **第三个问题：** 这个问题就要从 Provider 类型的 fiber 调和开始讲。
 
@@ -192,7 +192,7 @@ function propagateContextChange(workInProgress,context){
 
 如下当点击 componentB 下面的 span 触发 setState 更新 ，如下可以清晰看见 beginWork 和 render 流程。
 
-![context8.jpg](img/31/2.image)
+![context8.jpg](img/31/2.jpg)
 
 * 从 root 开始第一次调和， 三个 fiber 都会经历 beginWork ，通过对比优先级， `componentA` 和 `div` 停止向下 beginwork。
 * 更新发生在 componentB ，所以 componentB 渲染，触发 `render` ，得到新的 element，通过对比， `div` `span` 都会 beginwork。
@@ -201,7 +201,7 @@ function propagateContextChange(workInProgress,context){
 那么如上，如果 componentC 通过 `PureComponent` 或者 `shouldComponentUpdate` 限制更新之后。那么会变成如下的样子：
 
 
-![context9.jpg](img/31/3.image)
+![context9.jpg](img/31/3.jpg)
 
 * 如上 componentC 通过 `PureComponent` 处理后，不再 render ，当然也不会再向下 beginwork。
 
@@ -214,7 +214,7 @@ function propagateContextChange(workInProgress,context){
 * `componentB` 下面的 `div` 会停止向下的 beiginwork 。
 
 
-![context10.jpg](img/31/4.image)
+![context10.jpg](img/31/4.jpg)
 
 
 **我们总结流程如下：**
@@ -232,13 +232,13 @@ function propagateContextChange(workInProgress,context){
 那么将上述例子进行修改，`propagateContextChange` 的流程会下如下一样，把父级 fiber 的优先级提高。
 
 
-![context11.jpg](img/31/5.image)
+![context11.jpg](img/31/5.jpg)
 
 
 那么整个 fiber 更新流程会像如下一样
 
 
-![context12.jpg](img/31/6.image)
+![context12.jpg](img/31/6.jpg)
 
 ### 2 Consumer
 

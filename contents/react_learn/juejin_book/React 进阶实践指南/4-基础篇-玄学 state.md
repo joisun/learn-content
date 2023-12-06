@@ -51,7 +51,7 @@ this.setState({ number:1 },()=>{
 **更新的流程图如下：**
 
 
-![02.jpg](img/4/1.image)
+![02.jpg](img/4/1.jpg)
 
 请记住一个主要任务的先后顺序，这对于弄清渲染过程可能会有帮助：<br/>
  render 阶段 render 函数执行 ->  commit 阶段真实 DOM 替换 -> setState 回调函数执行 callback 。
@@ -144,7 +144,7 @@ export default class index extends React.Component{
 如上代码，在整个 React 上下文执行栈中会变成这样：
 
 
-![03.jpg](img/4/2.image)
+![03.jpg](img/4/2.jpg)
 
 那么，为什么异步操作里面的批量更新规则会被打破呢？比如用 promise 或者 setTimeout 在 handleClick 中这么写：
 
@@ -164,7 +164,7 @@ setTimeout(()=>{
 那么在整个 React 上下文执行栈中就会变成如下图这样:
 
 
-![04.jpg](img/4/3.image)
+![04.jpg](img/4/3.jpg)
 
 **所以批量更新规则被打破**。
 
@@ -327,7 +327,7 @@ export default function Index(props){
 效果:
 
 
-![01.jpg](img/4/4.image)
+![01.jpg](img/4/4.jpg)
 
 **`dispatch`更新特点**
 

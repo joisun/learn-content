@@ -81,7 +81,7 @@ class Index extends React.Component{
 PropsComponent 如果是一个类组件，那么可以直接通过 this.props 访问到它：
 
 
-![prop1.jpg](img/5/1.image)
+![prop1.jpg](img/5/1.jpg)
 
 在标签内部的属性和方法会直接绑定在 props 对象的属性上，对于组件的插槽会被绑定在 props 的 Children 属性中。
 
@@ -157,7 +157,7 @@ function  Container(props) {
 
 如果上述直接这么写，会报如下的错误：
 
-![comp3.jpg](img/5/2.image)
+![comp3.jpg](img/5/2.jpg)
 
 
 改成如下方式，就可以了。
@@ -191,7 +191,7 @@ function  Container(props) {
 首先在 Container 里打印 Children 看看是什么？
 
 
-![comp2.jpg](img/5/3.image)
+![comp2.jpg](img/5/3.jpg)
 
 ````js
 const Children = (props)=> (<div>
@@ -222,7 +222,7 @@ const Index = ()=>{
 ````
 **效果**
 
-![comp4.jpg](img/5/4.image)
+![comp4.jpg](img/5/4.jpg)
 
 
 这种情况需要先遍历 children ，判断 children 元素类型：
@@ -261,7 +261,7 @@ function Index(){
 ````
 **打印**
 
-![prop3.jpg](img/5/5.image)
+![prop3.jpg](img/5/5.jpg)
 
 Father 组件一方面直接将 Index 组件 indexProps 抽象传递给 Son，一方面混入 fatherProps 。
 
@@ -290,7 +290,7 @@ function Index(){
 ````
 **打印**
 
-![prop4.jpg](img/5/6.image)
+![prop4.jpg](img/5/6.jpg)
 
 成功的将 indexProps 中的 age 属性抽离出来。
 
@@ -397,7 +397,7 @@ export default  () => {
 **效果**
 
 
-![comp5.gif](img/5/7.image)
+![comp5.gif](img/5/7.jpg)
 
 ### 1 编写 `<Form>`
 

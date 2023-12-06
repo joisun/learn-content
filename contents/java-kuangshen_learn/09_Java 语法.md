@@ -147,7 +147,7 @@ graph LR
 
 为了更好的组织类，Java 提供了包机制，用于与别类名的**命名空间**
 
-<img src="09_Java 语法.assets/image-20210630002730821.png" alt="image-20210630002730821" style="zoom:50%;" />
+<img src="./09_Java 语法.assets/image-20210630002730821.png" alt="image-20210630002730821" style="zoom:50%;" />
 
 > 老师的类比解释
 >
@@ -205,7 +205,7 @@ public class HelloWorld {
 >
 > 如果没有自动展开，Idea中需要去掉该勾选项
 >
-> ![image-20210630003516350](09_Java 语法.assets/image-20210630003516350.png)
+> ![image-20210630003516350](./09_Java 语法.assets/image-20210630003516350.png)
 
 
 

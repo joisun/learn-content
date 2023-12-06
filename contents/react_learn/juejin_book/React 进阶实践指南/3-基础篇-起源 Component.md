@@ -228,7 +228,7 @@ function Father(){
 **效果**
 
 
-![comp0.gif](img/3/1.image)
+![comp0.gif](img/3/1.jpg)
 
 
 **⑤event bus事件总线**
@@ -321,7 +321,7 @@ export default Programmer
 效果：
 
 
-![comp1.jpg](img/3/2.image)
+![comp1.jpg](img/3/2.jpg)
 
 我们从上面不难发现这个继承增强效果很优秀。它的优势如下：
 

@@ -7,7 +7,7 @@
 众所周知，用 React 或者 Vue 构建的应用都是单页面应用，单页面应用是使用一个 html 前提下，一次性加载 js ， css 等资源，所有页面都在一个容器页面下，页面切换实质是组件的切换。
 
 
-![spa.jpg](img/22/1.image)
+![spa.jpg](img/22/1.jpg)
 
 ## 二 路由原理
 
@@ -18,7 +18,7 @@
 弄清楚 Router 原理之前，用一幅图表示 History ，React-Router ， React-Router-Dom 三者的关系。这对下面的系统学习很重要。
 
 
-![three.jpg](img/22/2.image)
+![three.jpg](img/22/2.jpg)
 
 * **history：** history 是整个 React-router 的核心，里面包括两种路由模式下改变路由的方法，和监听路由变化方法等。
 * **react-router：**既然有了 history 路由监听/改变的核心，那么需要**调度组件**负责派发这些路由的更新，也需要**容器组件**通过路由更新，来渲染视图。所以说 React-router 在 history 核心基础上，增加了 Router ，Switch ，Route 等组件来处理视图渲染。
@@ -143,7 +143,7 @@ hash 路由模式下，监听路由变化用的是 hashchange 。
 综上先用一幅图来描述 Router 和 BrowserRouter 或 HashRouter 的关系：
 
 
-![twoofrouter.jpg](img/22/3.image)
+![twoofrouter.jpg](img/22/3.jpg)
 
 
 为了让大家了解路由的更新机制，所以有必要去研究 Router 内部到底做了些什么？
@@ -217,7 +217,7 @@ export default Index
 * `renderProps` 形式：可以将 childen 作为渲染函数执行，可以传递路由信息，也可以传递父组件信息。
 
 
-![routeList.gif](img/22/4.image)
+![routeList.gif](img/22/4.jpg)
 
 
 **exact**
@@ -323,7 +323,7 @@ Switch 有什么作用呢，假设在组件中像如下这么配置路由：
 我用一幅图描述当用户触发 history.push ，或者点击浏览器前进后退，路由改变到页面重新渲染流程。
 
 
-![zong.jpg](img/22/5.image)
+![zong.jpg](img/22/5.jpg)
 
 ## 四 路由使用指南
 对于路由使用，还有一些细节值得去思考。
@@ -482,7 +482,7 @@ function CustomRouter(props){
 
 之前在 HOC 章节讲了通过 HOC 来对路由进行拦截，然后进行路由匹配，今天将要换一种思路，用自定义路由拦截，如果没有权限就重定向到无权限页面中。
 
-![hoc6.gif](img/22/6.image)
+![hoc6.gif](img/22/6.jpg)
 
 假设期望的效果是：
 
@@ -547,7 +547,7 @@ export function PermissionRouter(props){
 完美达到效果：
 
 
-![success.gif](img/22/7.image)
+![success.gif](img/22/7.jpg)
 
 
 

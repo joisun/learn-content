@@ -9,7 +9,7 @@
 假设需要动态改变 theme ，那么需要从根组件更新，只要需要 theme 的组件，由它开始到根组件的一条组件链结构都需要更新，会造成牵一发动全身的影响。props 方式看来不切实际。
 
 
-![context1.jpg](img/8/1.image)
+![context1.jpg](img/8/1.jpg)
 
 为了解决上述 props 传递的两个问题，React提供了context‘上下文’模式，具体模式是这样的，React组件树A节点，用Provider提供者注入theme，然后在需要theme的地方，用 Consumer 消费者形式取出theme，供给组件渲染使用即可，这样减少很多无用功。用官网上的一句话形容就是Context 提供了一个无需为每层组件手动添加 props，就能在组件树间进行数据传递的方法。
 
@@ -68,7 +68,7 @@ const Son = ()=> <ConsumerDemo/>
 
 效果：
 
-![context2.jpg](img/8/2.image)
+![context2.jpg](img/8/2.jpg)
 
 作为消费者，需要在组件的静态属性指明我到底需要哪个提供者提供的状态，在 demo 项目中，ConsumerDemo 的 contextTypes 明确的指明了需要 ProviderDemo 提供的 theme信息，然后就可以通过 this.context.theme 访问到 theme ，用做渲染消费。
 
@@ -196,7 +196,7 @@ export default function ProviderDemo(){
 效果
 
 
-![context5.gif](img/8/3.image)
+![context5.gif](img/8/3.jpg)
 
 Provider 模式下 context 有一个显著的特点，就是 **Provder 的 value 改变，会使所有消费 value 的组件重新渲染**，如上通过一个 useState 来改变 contextValue 的值，contextValue 改变，会使 ConsumerDemo 自动更新，注意这个更新并不是由父组件 son render 造成的，因为给 son 用 memo 处理过，这种情况下，Son 没有触发 render，而是 ConsumerDemo 自发的render。
 
@@ -287,7 +287,7 @@ export default function ProviderDemo(){
 效果：
 
 
-![context3.jpg](img/8/4.image)
+![context3.jpg](img/8/4.jpg)
 
 * ThemeContext 保存主题信息，用 LanContext 保存语言信息。
 * 两个 Provider 嵌套来传递全局信息。
@@ -333,7 +333,7 @@ export default function Provider1Demo(){
 ````
 效果： 
 
-![context4.jpg](img/8/5.image)
+![context4.jpg](img/8/5.jpg)
 
 * 全局只有一个 ThemeContext ，两次用 provider 传递两个不同 context 。
 * 组件获取 context 时候，会获取离当前组件最近的上一层 Provider 。
@@ -351,7 +351,7 @@ Provider 特性总结：
 **实现效果**
 
 
-![context6.gif](img/8/6.image)
+![context6.gif](img/8/6.jpg)
 
 ````js
 const ThemeContext = React.createContext(null) // 主题颜色Context

@@ -40,7 +40,7 @@ class Index extends React.Component{
 ````
 **打印**
 
-![ref.jpg](img/7/1.image)
+![ref.jpg](img/7/1.jpg)
 
 
 React.createRef 的底层逻辑很简单。下面一起来看一下：
@@ -106,7 +106,7 @@ export default class Index extends React.Component{
 **打印**
 
 
-![ref1.jpg](img/7/2.image)
+![ref1.jpg](img/7/2.jpg)
 
 如上面代码片段，用一个字符串 ref 标记一个 DOM 元素，一个类组件(函数组件没有实例，不能被 Ref 标记)。React 在底层逻辑，会判断类型，如果是 DOM 元素，会把真实 DOM 绑定在组件 this.refs (组件实例下的 refs )属性上，如果是类组件，会把子组件的实例绑定在 this.refs 上。
 
@@ -133,7 +133,7 @@ export default class Index extends React.Component{
 **打印**
 
 
-![ref2.jpg](img/7/3.image)
+![ref2.jpg](img/7/3.jpg)
 
 如上代码片段，当用一个函数来标记 Ref 的时候，将作为 callback 形式，等到真实 DOM 创建阶段，执行 callback ，获取的 DOM 元素或组件实例，将以回调函数第一个参数形式传入，所以可以像上述代码片段中，用组件实例下的属性 `currentDom`和 `currentComponentInstance` 来接收真实 DOM 和组件实例。
 
@@ -162,7 +162,7 @@ export default class Index extends React.Component{
 **打印**
 
 
-![ref3.jpg](img/7/4.image)
+![ref3.jpg](img/7/4.jpg)
 
 
 总结: 大家请记住三种获取 ref 的方式。
@@ -221,7 +221,7 @@ class GrandFather extends React.Component{
 
 **效果**
 
-![forwaedRef.jpg](img/7/5.image)
+![forwaedRef.jpg](img/7/5.jpg)
 
 上述所示，forwardRef 把 ref 变成了可以通过 props 传递和转发。
 
@@ -271,7 +271,7 @@ export default function Home(){
 **效果**
 
 
-![ref4.jpg](img/7/6.image)
+![ref4.jpg](img/7/6.jpg)
 
 如上代码所示，流程主要分为几个方面：
 
@@ -357,7 +357,7 @@ export default function Father(){
 
 **效果**
 
-![ref5.gif](img/7/7.image)
+![ref5.gif](img/7/7.jpg)
 
 #### ② 函数组件 forwardRef + useImperativeHandle
 
@@ -373,7 +373,7 @@ forwardRef + useImperativeHandle 可以完全让函数组件也能流畅的使�
 **流程图如下所示**
 
 
-![ref6.jpg](img/7/8.image)
+![ref6.jpg](img/7/8.jpg)
 
 ````js
 // 子组件
@@ -415,7 +415,7 @@ class Index extends React.Component{
 ````
 **效果图**
 
-![useImperativeHandle.gif](img/7/9.image)
+![useImperativeHandle.gif](img/7/9.jpg)
 
 流程分析： 
 
@@ -482,7 +482,7 @@ export default class Index extends React.Component{
 效果：
 
 
-![ref7.gif](img/7/10.image)
+![ref7.gif](img/7/10.jpg)
 
 第一次打印为 null ，第二次才是 div ，为什么会这样呢？ 这样的意义又是什么呢？
 
@@ -704,7 +704,7 @@ function safelyDetachRef(current) {
 
 ### 逻辑流程图
 
-![ref7.jpg](img/7/11.image)
+![ref7.jpg](img/7/11.jpg)
 
 ## 五 总结
 

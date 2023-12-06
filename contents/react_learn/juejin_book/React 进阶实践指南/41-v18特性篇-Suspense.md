@@ -13,7 +13,7 @@ React 对 Suspense 是情有独钟的，React v18 理所应当的对 Suspense �
 比如：
 
 
-![WechatIMG2659.jpeg](img/41/1.image)
+![WechatIMG2659.jpeg](img/41/1.jpg)
 
 如上 C D E 都是需要 Suspense 挂起的异步组件，但是因为受到数据加载时间和展示优先级的影响，期望 C->D->E 的展示顺序，这个时候传统的 Suspense 解决不了问题。
 
@@ -60,14 +60,14 @@ SuspenseList 接受两个 props：
 比如我们把如上案例中 SuspenseList 加入 tail = collapsed 之后，CompA ，CompB，CompC 的加载顺序如下图所示：
 
 
-![WechatIMG984.jpeg](img/41/2.image)
+![WechatIMG984.jpeg](img/41/2.jpg)
 
 
 ## 三 ssr 中的 Suspense
 
 在 React v18 中 对服务端渲染 SSR 增加了流式渲染的特性  [New Suspense SSR Architecture in React 18](https://github.com/reactwg/react-18/discussions/37) ， 那么这个特性是什么呢？我们来看一下：
 
-![WechatIMG6936.jpeg](img/41/3.image)
+![WechatIMG6936.jpeg](img/41/3.jpg)
 
 刚开始的时候，因为服务端渲染，只会渲染 html 结构，此时还没注入 js 逻辑，所以我们把它用灰色不能交互的模块表示。（如上灰色的模块不能做用户交互，比如点击事件之类的。）
 
@@ -79,7 +79,7 @@ SuspenseList 接受两个 props：
 接下来会通过 script 加载 js 的方式 流式注入 html 代码的片段，来补充整个页面。接下来的流程如下所示：
 
 
-![d94d8ddb-bdcd-4be8-a851-4927c7966b99.png](img/41/4.image)
+![d94d8ddb-bdcd-4be8-a851-4927c7966b99.png](img/41/4.jpg)
 
 * 页面 A B 是初始化渲染的，C 是 Suspense 处理的组件，在开始的时候 C 没有加载，C 通过流式渲染的方式优先注入 html 片段。
 * 接下来 A B 注入逻辑，C 并没有注水。
@@ -90,7 +90,7 @@ SuspenseList 接受两个 props：
 比如有两个模块都是通过 Suspense 挂起的，当两个模块发生交互逻辑时，会根据交互来选择性地改变 hydrate 的顺序。
 
 
-![ede45613-9994-4e77-9f50-5b7c1faf1160.png](img/41/5.image)
+![ede45613-9994-4e77-9f50-5b7c1faf1160.png](img/41/5.jpg)
 
 我们来看一下如上 hydrate 流程，在 SSR 上的流程如下：
 * 初始化的渲染 A B 组件，C 和 D 通过 Suspense 的方式挂起。

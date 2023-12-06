@@ -39,7 +39,7 @@ Fiber 的英文的是’纤维‘，fiber 诞生在 `Reactv16` 版本，整个 R
 结构如下图所示：
 
 
-![2.jpg](img/18/1.image)
+![2.jpg](img/18/1.jpg)
 
 首先先来看一下 element 与 fiber 之间的对应关系。
 
@@ -130,7 +130,7 @@ export default class Index extends React.Component{
 **fiber对应的关系如下**
 
 
-![WechatIMG1720.jpeg](img/18/2.image)
+![WechatIMG1720.jpeg](img/18/2.jpg)
 
 
 ## 三 Fiber更新机制
@@ -166,7 +166,7 @@ function createFiberRoot(containerInfo,tag){
 效果：
 
 
-![3.jpg](img/18/3.image)
+![3.jpg](img/18/3.jpg)
 
 
 **第二步：workInProgress和current**
@@ -186,7 +186,7 @@ workInProgressFiber.alternate = currentFiber
 效果：
 
 
-![4.jpg](img/18/4.image)
+![4.jpg](img/18/4.jpg)
 
 
 **第三步：深度调和子节点，渲染视图**
@@ -197,14 +197,14 @@ workInProgressFiber.alternate = currentFiber
 效果：
 
 
-![5.jpg](img/18/5.image)
+![5.jpg](img/18/5.jpg)
 
 最后会以 workInProgress 作为最新的渲染树，fiberRoot 的 current 指针指向 workInProgress 使其变为 current Fiber 树。到此完成初始化流程。
 
 效果：
 
 
-![6.jpg](img/18/6.image)
+![6.jpg](img/18/6.jpg)
 
 
 ### 2 更新
@@ -214,7 +214,7 @@ workInProgressFiber.alternate = currentFiber
 效果：
 
 
-![7.jpg](img/18/7.image)
+![7.jpg](img/18/7.jpg)
 
 
 **｜--------问与答--------｜**<br/>
@@ -440,7 +440,7 @@ Layout 阶段 DOM 已经更新完毕，Layout 做的事情有：
 
 把上一章节和本章节串联起来，调和调度过程，如下图所示：
 
-![3.jpeg](img/18/8.image)
+![3.jpeg](img/18/8.jpg)
 
 ## 五 总结
 

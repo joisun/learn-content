@@ -34,7 +34,7 @@ export function nextTick(fn?: () => void): Promise<void> {
 
 大致实现流程图如下所示：
 
-![4.jpeg](img/36/1.image)
+![4.jpeg](img/36/1.jpg)
 
 我们也可以来模拟一下整个流程的实现。
 
@@ -91,7 +91,7 @@ mockOnclick()
 看一下打印效果：
 
 
-![3.jpeg](img/36/2.image)
+![3.jpeg](img/36/2.jpg)
 
 
 ### 2 第二种：可控任务实现批量更新
@@ -105,7 +105,7 @@ mockOnclick()
 我们用一幅流程图来描述一下原理。
 
 
-![5.jpeg](img/36/3.image)
+![5.jpeg](img/36/3.jpg)
 
 
 接下来我们模拟一下具体的实现：
@@ -167,7 +167,7 @@ mockOnclick()
 
 打印结果：
 
-![6.jpg](img/36/4.image)
+![6.jpg](img/36/4.jpg)
 
 分析一下核心流程：
 
@@ -275,19 +275,19 @@ function Index(){
 * 点击按钮 `同步环境下`，组件渲染一次。
 
 
-![7.jpg](img/36/5.image)
+![7.jpg](img/36/5.jpg)
 
 * 点击按钮 `异步环境下`，组件会渲染二次。相信读过之前章节的同学，都明白原理是什么，在异步条件下的更新任务，不在 React 可控的范围内，所以会触发两次流程。
 
 
-![8.jpg](img/36/6.image)
+![8.jpg](img/36/6.jpg)
 
 **重点来了，我们看一下 v18 concurrent 下更新：**
 
 * 无论点击 **`同步环境下`** 还是 **`异步环境下`** ，组件都会执行一次。
 
 
-![7.jpg](img/36/7.image)
+![7.jpg](img/36/7.jpg)
 
 首先想一下，在 concurrent 下，如何实现更新合并的呢？
 
@@ -395,7 +395,7 @@ function scheduleCallback(priorityLevel, callback) {
 最后用一幅流程图描述一下流程：
 
 
-![9.jpg](img/36/8.image)
+![9.jpg](img/36/8.jpg)
 
 
 ## 五 总结

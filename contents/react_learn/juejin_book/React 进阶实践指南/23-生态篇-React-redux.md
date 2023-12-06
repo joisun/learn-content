@@ -14,7 +14,7 @@
 效果图：
 
 
-![3.jpg](img/23/1.image)
+![3.jpg](img/23/1.jpg)
 
 
 **② 复杂组件之间如何通信？**
@@ -24,7 +24,7 @@
 这个时候状态管理就派上用场了，可以把 B 组件的信息传递给状态管理层，H 组件连接状态管理层，再由状态管理层通知 H 组件，这样就本质解决了组件通信问题。
 
 
-![4.jpg](img/23/2.image)
+![4.jpg](img/23/2.jpg)
 
 
 ### 2 React-Redux,Redux,React三者关系
@@ -40,7 +40,7 @@
 
 
 
-![3.jpg](img/23/3.image)
+![3.jpg](img/23/3.jpg)
 
 ### 3 温习 Redux
 
@@ -51,7 +51,7 @@
 * 1 单向数据流：整个 redux ，数据流向都是单向的，我用一张官网的图片描述整个数据流动的流程。 
 
 
-![redux.gif](img/23/4.image)
+![redux.gif](img/23/4.jpg)
 
 * 2 state 只读：在 Redux 中不能通过直接改变 state ，来让状态发生变化，如果想要改变 state ，那就必须触发一次 action ，通过 action 执行每个 reducer 。 
 
@@ -188,7 +188,7 @@ function Index(){
 **效果**
 
 
-![1.gif](img/23/5.image)
+![1.gif](img/23/5.jpg)
 
 **总结：**
 
@@ -329,7 +329,7 @@ export default connect(mapStateToProps)(Index)
 效果：
 
 
-![5.jpg](img/23/6.image)
+![5.jpg](img/23/6.jpg)
 
 ### 3 实践二：React-Redux实现组件通信
 
@@ -382,7 +382,7 @@ export const CompB =  connect(CompBMapStateToProps)(ComponentB)
 **效果：**
 
 
-![2.gif](img/23/7.image)
+![2.gif](img/23/7.jpg)
 
 ## 三 React-Redux原理
 
@@ -480,7 +480,7 @@ export default class Subscription {
 **层层订阅模型：**
 
 
-![6.jpg](img/23/8.image)
+![6.jpg](img/23/8.jpg)
 
 ### 第三部分： connect控制更新
 

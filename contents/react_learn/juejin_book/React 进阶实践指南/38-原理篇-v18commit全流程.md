@@ -120,7 +120,7 @@ function commitRootImpl(){
 接下来看一下打印内容：
 
 
-![1.jpeg](img/38/1.image)
+![1.jpeg](img/38/1.jpg)
 
 通过上面的打印内容，可以看出，真实 DOM 改变确实在 mutation 阶段执行的，在 mutation 前后的两次打印，可以看出打印颜色的变化。
 
@@ -153,7 +153,7 @@ var PassiveMask = Passive | ChildDeletion;
 用一幅图表示在 commit 阶段执行哪些事？
 
 
-![5.jpeg](img/38/2.image)
+![5.jpeg](img/38/2.jpg)
 
 
 这些 Mask 在整个 React 应用中充当什么角色呢？ React 又是怎么找到这些 Mask 并且处理的呢？ 接下来我们从 beforeMutation 开始寻找线索。
@@ -231,17 +231,17 @@ complete 的流程是向上归并的流程，首先会执行 commitBeforeMutatio
 比如整个 fiber 树的结构如下所示：
 
 
-![2.jpeg](img/38/3.image)
+![2.jpeg](img/38/3.jpg)
 
 那么 begin 流程如下所示：
 
 
-![3.jpeg](img/38/4.image)
+![3.jpeg](img/38/4.jpg)
 
 complete 流程如下所示：
 
 
-![4.jpeg](img/38/5.image)
+![4.jpeg](img/38/5.jpg)
 
 那么最重要的部分来了，就是 commitBeforeMutationEffectsOnFiber 做了什么事情：
 
@@ -594,7 +594,7 @@ function commitHookEffectListMount(flags, finishedWork) {
 用一幅流程图表示 commit 阶段的流程：
 
 
-![6.jpeg](img/38/6.image)
+![6.jpeg](img/38/6.jpg)
 
 ## 七 总结
 

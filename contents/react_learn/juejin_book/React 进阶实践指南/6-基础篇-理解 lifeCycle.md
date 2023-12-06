@@ -45,7 +45,7 @@ function updateClassComponent(){
 在组件实例上可以通过 `_reactInternals` 属性来访问组件对应的 fiber 对象。在 fiber 对象上，可以通过 `stateNode` 来访问当前 fiber 对应的组件实例。两者的关系如下图所示。
 
 
-![lifecycle3.jpg](img/6/1.image)
+![lifecycle3.jpg](img/6/1.jpg)
 
 ### React 类组件生命周期执行过程探秘
 
@@ -118,7 +118,7 @@ function commitLifeCycles(finishedRoot,current,finishedWork){
 执行顺序：constructor -> getDerivedStateFromProps / componentWillMount -> render -> componentDidMount
 
 
-![lifesycle4.jpg](img/6/2.image)
+![lifesycle4.jpg](img/6/2.jpg)
 
 接下来分析一下一次组件更新中，会有哪些生命周期执行呢？
 
@@ -196,7 +196,7 @@ function commitBeforeMutationLifeCycles(current,finishedWork){
 接下来执行生命周期 componentDidUpdate ，此时 DOM 已经修改完成。可以操作修改之后的 DOM 。到此为止更新阶段的生命周期执行完毕。
 
 
-![lifecycle5.jpg](img/6/3.image)
+![lifecycle5.jpg](img/6/3.jpg)
 
 更新阶段对应的生命周期的执行顺序：
 
@@ -218,13 +218,13 @@ function callComponentWillUnmountWithTimer(){
 
 
 
-![lifecycle6.jpg](img/6/4.image)
+![lifecycle6.jpg](img/6/4.jpg)
 
 
 三个阶段生命周期+无状态组件总览图：
 
 
-![lifesycyle8.jpg](img/6/5.image)
+![lifesycyle8.jpg](img/6/5.jpg)
 
 
 ### React 各阶段生命周期能做些什么
@@ -579,7 +579,7 @@ export default function Index(){
 效果：
 
 
-![2.png](img/6/6.image)
+![2.png](img/6/6.jpg)
 
 此时 div 的字体颜色和字体大小已经更改。
 
@@ -683,7 +683,7 @@ export default ()=>{
 **效果**
 
 
-![lifecycle.gif](img/6/7.image)
+![lifecycle.gif](img/6/7.jpg)
 
 ## 四 实践-实现一个ScrollView组件
 
@@ -747,7 +747,7 @@ function () {
 **实现效果**
 
 
-![lifecycle2.gif](img/6/8.image)
+![lifecycle2.gif](img/6/8.jpg)
 
 
 编写 **ScrollView**

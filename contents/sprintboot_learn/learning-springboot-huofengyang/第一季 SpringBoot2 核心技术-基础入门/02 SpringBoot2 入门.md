@@ -56,15 +56,15 @@
 
 ### 2.1 创建maven 工程
 
-![image-20220507000627140](02 SpringBoot2 入门.assets/image-20220507000627140.png)
+![image-20220507000627140](./02 SpringBoot2 入门.assets/image-20220507000627140.png)
 
 >  首次创建项目，要先检查maven 配置文件，和java 版本
 >
-> <img src="02 SpringBoot2 入门.assets/image-20220507000919769.png" alt="image-20220507000919769" style="zoom:50%;" />
+> <img src="./02 SpringBoot2 入门.assets/image-20220507000919769.png" alt="image-20220507000919769" style="zoom:50%;" />
 >
-> <img src="02 SpringBoot2 入门.assets/image-20220507001258945.png" alt="image-20220507001258945" style="zoom:50%;" />
+> <img src="./02 SpringBoot2 入门.assets/image-20220507001258945.png" alt="image-20220507001258945" style="zoom:50%;" />
 >
-> <img src="02 SpringBoot2 入门.assets/image-20220507001738813.png" alt="image-20220507001738813" style="zoom: 33%;" />
+> <img src="./02 SpringBoot2 入门.assets/image-20220507001738813.png" alt="image-20220507001738813" style="zoom: 33%;" />
 >
 > 
 
@@ -72,39 +72,39 @@
 
 https://docs.spring.io/spring-boot/docs/current/reference/html/getting-started.html#getting-started.first-application.pom
 
-![image-20220507002700507](02 SpringBoot2 入门.assets/image-20220507002700507.png)
+![image-20220507002700507](./02 SpringBoot2 入门.assets/image-20220507002700507.png)
 
 
 
 ### 2.1 创建主程序
 
-![image-20220507002922604](02 SpringBoot2 入门.assets/image-20220507002922604.png)
+![image-20220507002922604](./02 SpringBoot2 入门.assets/image-20220507002922604.png)
 
-![image-20220507003326247](02 SpringBoot2 入门.assets/image-20220507003326247.png)
+![image-20220507003326247](./02 SpringBoot2 入门.assets/image-20220507003326247.png)
 
 创建Controller
 
-![image-20220507003509602](02 SpringBoot2 入门.assets/image-20220507003509602.png) 
+![image-20220507003509602](./02 SpringBoot2 入门.assets/image-20220507003509602.png) 
 
 ### 2.1 编写业务
 
-![image-20220507004410606](02 SpringBoot2 入门.assets/image-20220507004410606.png)
+![image-20220507004410606](./02 SpringBoot2 入门.assets/image-20220507004410606.png)
 
 未来，可能我们很多的方法(请求路由)的返回结果都是直接返回给浏览器，所以我们可以将`@ResponseBody` 这个注解提前到上一层类中，即`HelloController`
 
-![image-20220507004856704](02 SpringBoot2 入门.assets/image-20220507004856704.png)
+![image-20220507004856704](./02 SpringBoot2 入门.assets/image-20220507004856704.png)
 
 ### 2.1 测试
 
 直接 run main 方法就可以跑起来
 
-![image-20220507005003508](02 SpringBoot2 入门.assets/image-20220507005003508.png)
+![image-20220507005003508](./02 SpringBoot2 入门.assets/image-20220507005003508.png)
 
-![image-20220507005127501](02 SpringBoot2 入门.assets/image-20220507005127501.png)
+![image-20220507005127501](./02 SpringBoot2 入门.assets/image-20220507005127501.png)
 
 ### 2.1 简化配置
 
-![image-20220507153718374](02 SpringBoot2 入门.assets/image-20220507153718374.png)
+![image-20220507153718374](./02 SpringBoot2 入门.assets/image-20220507153718374.png)
 
 增加配置文件 src/main/resources/application.properties
 
@@ -122,6 +122,6 @@ https://docs.spring.io/spring-boot/docs/current/reference/html/getting-started.h
 
 Spring Boot 可以通过一个插件依赖就直接将项目打包为Jar 包。 
 
-![image-20220507155638519](02 SpringBoot2 入门.assets/image-20220507155638519.png)
+![image-20220507155638519](./02 SpringBoot2 入门.assets/image-20220507155638519.png)
 
-![image-20220507161324989](02 SpringBoot2 入门.assets/image-20220507161324989.png)
+![image-20220507161324989](./02 SpringBoot2 入门.assets/image-20220507161324989.png)

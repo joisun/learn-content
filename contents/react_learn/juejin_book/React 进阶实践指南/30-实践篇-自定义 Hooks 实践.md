@@ -88,7 +88,7 @@ export default function Root(){
 **效果**
 
 
-![4.gif](img/30/1.image)
+![4.gif](img/30/1.jpg)
 
 
 ## 三 实践二：带查询的分页加载长列表—— useQueryTable 
@@ -109,7 +109,7 @@ useQueryTable 的设计主要分为两部分，分别为表格和查询表单。
 自定义 hooks —— useQueryTable 的设计模型图如下：
 
 
-![5.jpg](img/30/2.image)
+![5.jpg](img/30/2.jpg)
 
 ### 代码实现
 
@@ -289,7 +289,7 @@ function Index (){
 **效果**
 
 
-![6.gif](img/30/3.image)
+![6.gif](img/30/3.jpg)
 
 * 整个查询表格逻辑层基本就一个自定义 hooks —— `useQueryTable` 就搞定了。
 * `getTableData` 模拟了数据交互过程 ，其内部的代码逻辑不必纠结 。
@@ -367,7 +367,7 @@ const [ state , dispatch ] = useConnect(mapStoreToState)
 #### 原理图
 
 
-![7.jpg](img/30/4.image)
+![7.jpg](img/30/4.jpg)
 
 
 ### 2 useCreateStore 
@@ -664,7 +664,7 @@ function CompD(){
 #### 效果
 
 
-![8.gif](img/30/5.image)
+![8.gif](img/30/5.jpg)
 
 ## 五 持续更新中～
 本章节，第二十六章节，第十四章节为持续维护章节，会有更多精彩的自定义 hooks 实践场景。
