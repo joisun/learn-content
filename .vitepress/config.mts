@@ -10,7 +10,7 @@ const getSideBar = (): any => {
       hyphenToSpace: true,
       keepMarkdownSyntaxFromTitle: true,
       sortMenusOrderByDescending:true,
-      // excludeFolders: ["code","codes"],
+      excludeFolders: ["code","codes"],
     },
   ]);
   return generatedSidebar ?? [];

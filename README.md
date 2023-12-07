@@ -1,8 +1,12 @@
 
+## contents 下目录结构
+
 contents 下目录结构应该形如：
 
 学习主题1
   - 学习资料来源1
+    - README.md // 介绍说明当前学习资源的来源等基本信息
+    - code.md // 用于打开对应代码的 github 地址
     - code: 代码code base
         - codebase1
         - codebase2
@@ -15,32 +19,46 @@ contents 下目录结构应该形如：
   - 学习资料来源3
   - ...
 
-你应该在每一个 codebase 下面，如果需要支持跳转到对应的在线 vscode 编辑器时，应该定义文件：`codebaseX/README.md`
+学习主题2
+...
+
+
+## code.md
+
+如果你的学习主题下面有code 目录的时候，你应该在每一个学习主题目录下同时创建一个 code.md 文件, 这个文件复制自 “contents/.tmp/code.md”
+
+
+> 实际上  code.md 的文件名是任意的
+
+> 注意： .vitepress/config.mts 中 getSideBar 部分，由于 `excludeFolders: ["code","codes"],` 的配置，所以sideBar 部分不会解析 code 目录的
+
 其内容为：
+```
+<!--@include: @/.parts/githubLink.md-->
 
 ```
-<!--@include: @/.parts/vscodeLink.md-->
 
-```
+## constens/.tmp 目录说明
 
+一些便于手动copy 的模板文件
 
 
 ## constens/.part 目录说明
 
 vitepress 具备在 markdown 中引入另一个 markdown 文件的功能，这里的 .part 目录下的是 markdown 片段
 
-### contents/.parts/vscodeLink.md
+### contents/.parts/githubLink.md
 
-这个文件是用于自动生成 vscode 编辑器链接的
+这个文件是用于自动生成 github 链接的
 其中：
 ```ts
-<a target="_blank" :href="$vscode_base_url + filePath">open in vscode</a>
+<a target="_blank" :href="$github_base_url + filePath">open in vscode</a>
 ```
-`$vscode_base_url` 这是个全局的 vue 变量， 它被定义在 .vitepress/theme/index.ts
+`$github_base_url` 这是个全局的 vue 变量， 它被定义在 .vitepress/theme/index.ts
 
 ```ts
 ...
-app.config.globalProperties.$vscode_base_url = vscode_base_url
+app.config.globalProperties.$github_base_url = github_base_url
 ...
 ```
 
