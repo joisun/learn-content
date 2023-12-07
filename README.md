@@ -22,10 +22,13 @@ contents 下目录结构应该形如：
 学习主题2
 ...
 
+## 学习主题X/index.md
+
+每一个学习主题目录下，应该有一个 index.md 文件，其内容为：一个一级标题，作为生成的 sideBar 目录名称
 
 ## code.md
 
-如果你的学习主题下面有code 目录的时候，你应该在每一个学习主题目录下同时创建一个 code.md 文件, 这个文件复制自 “contents/.tmp/code.md”
+如果你的学习主题下面有 code 目录的时候，你应该在其同级目录下同时创建一个 code.md 文件, 这个文件复制自 “contents/.tmp/code.md”， 从而使得页面可以生成打开 github 的链接
 
 
 > 实际上  code.md 的文件名是任意的

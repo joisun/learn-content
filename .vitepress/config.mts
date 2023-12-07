@@ -10,6 +10,8 @@ const getSideBar = (): any => {
       hyphenToSpace: true,
       keepMarkdownSyntaxFromTitle: true,
       sortMenusOrderByDescending:true,
+      includeFolderIndexFile: false,
+      useFolderTitleFromIndexFile:true,
       excludeFolders: ["code","codes"],
     },
   ]);
@@ -25,13 +27,14 @@ export default defineConfig({
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: 'Guide', link: '/' },
+      { text: 'Home', link: '/' },
+      { text: 'sunzy.fun', link: 'https://sunzy.fun/' },
+      { text: 'cnblog', link: 'https://www.cnblogs.com/jaycethanks/' },
+      { text: 'github.io', link: 'https://jaycethanks.github.io/' },
       {
-        text: 'Dropdown Menu',
+        text: 'Tools',
         items: [
-          { text: 'Item A', link: '/' },
-          { text: 'Item B', link: '/' },
-          { text: 'Item C', link: '/' }
+          { text: 'Svg Convert', link: 'https://jaycethanks.github.io/demos/Others/svgConvert/dist/' },
         ]
       }
     ],
