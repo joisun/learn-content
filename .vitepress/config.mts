@@ -10,7 +10,7 @@ const getSideBar = (): any => {
       hyphenToSpace: true,
       keepMarkdownSyntaxFromTitle: true,
       sortMenusOrderByDescending:true,
-      excludeFolders: ["code","codes"],
+      // excludeFolders: ["code","codes"],
     },
   ]);
   return generatedSidebar ?? [];
@@ -22,7 +22,6 @@ export default defineConfig({
   srcDir:'contents',
   base:"/learn-content/", //https://vitepress.dev/reference/site-config#base
   ignoreDeadLinks: true,
-  srcExclude: ['**/README.md', '**/TODO.md'],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
