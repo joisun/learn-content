@@ -1,4 +1,10 @@
 var myDoc = app.activeDocument;
+var myLine1 = myDoc.pathItems.add();
+//set stroked to true so we can see the path
+myLine1.stroked = true;
+myLine1.setEntirePath([[0, 0], [275, 200], [100, 200]]);
+
+var myDoc = app.activeDocument;
 var myLine = myDoc.pathItems.add();
 
 //set stroked to true so we can see the path

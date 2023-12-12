@@ -1,0 +1,1 @@
+[Scripting Constants — Illustrator Scripting Guide 0.0.1 documentation (docsforadobe.dev)](https://ai-scripting.docsforadobe.dev/jsobjref/scripting-constants.html)
