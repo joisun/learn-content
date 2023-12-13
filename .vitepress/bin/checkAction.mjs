@@ -16,6 +16,11 @@ const fetchWorkflows = async () => {
             headers: Config.HeaderOptions
         }).then(response => response.json()).then(data => {
             const workflows_id = [];
+            if(!data.workflows){
+                console.error("请求失败:",data.message, " ",data.documentation_url)
+                process.exit(1)
+            }
+            
             for (let workflow of data.workflows) {
                 workflows_id.push(workflow.id)
             }
