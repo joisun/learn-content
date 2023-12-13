@@ -14,6 +14,7 @@
   "husky": {
     "hooks": {
       "post-push": "pnpm run status"
+    }
     },
   "keywords": [],
   "author": "",
