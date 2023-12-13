@@ -11,10 +11,15 @@
     "curl_status": "./.vitepress/bin/checkActionStatus.sh",
     "status": "node .vitepress/bin/checkAction.mjs"
   },
+  "husky": {
+    "hooks": {
+      "post-push": "pnpm run status"
+    },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "husky": "^8.0.3",
     "node-fetch": "^3.3.2",
     "ts-node": "^10.9.1",
     "vitepress": "1.0.0-rc.31",
