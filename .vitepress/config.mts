@@ -12,6 +12,7 @@ const getSideBar = (): any => {
       sortMenusOrderByDescending:true,
       includeFolderIndexFile: false,
       useFolderTitleFromIndexFile:true,
+      sortMenusOrderNumerically:true,
       excludeFolders: ["code","codes"],
     },
   ]);

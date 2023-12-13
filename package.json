@@ -7,12 +7,15 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "docs:dev": "vitepress dev",
     "docs:build": "vitepress build",
-    "docs:preview": "vitepress preview"
+    "docs:preview": "vitepress preview",
+    "curl_status": "./.vitepress/bin/checkActionStatus.sh",
+    "status": "node .vitepress/bin/checkAction.mjs"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "node-fetch": "^3.3.2",
     "ts-node": "^10.9.1",
     "vitepress": "1.0.0-rc.31",
     "vitepress-sidebar": "^1.18.0"
