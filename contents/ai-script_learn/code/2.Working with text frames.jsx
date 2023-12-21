@@ -1,3 +1,6 @@
+/// <reference path="node_modules/.pnpm/types-for-adobe@7.0.12/node_modules/types-for-adobe/Illustrator/2015.3/index.d.ts" />
+
+
 var myDoc = documents.add();
 var myPathItem1 = myDoc.pathItems.rectangle(244, 64, 82, 76);
 var myTextFrame1 = myDoc.textFrames.areaText(myPathItem1);
@@ -10,6 +13,6 @@ var sText = "This is two text frames linked together as one story, with text flo
 myTextFrame1.contents = sText;
 redraw();
 
-var myDoc = app.activeDocument;
+var myDoc = app.
 alert("There are " + myDoc.textFrames.length + " text frames.");
 alert("There are " + myDoc.stories.length + " stories.");

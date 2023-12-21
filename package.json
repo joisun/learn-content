@@ -15,7 +15,7 @@
     "hooks": {
       "post-push": "pnpm run status"
     }
-    },
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -25,5 +25,8 @@
     "ts-node": "^10.9.1",
     "vitepress": "1.0.0-rc.31",
     "vitepress-sidebar": "^1.18.0"
+  },
+  "dependencies": {
+    "types-for-adobe": "^7.0.12"
   }
 }

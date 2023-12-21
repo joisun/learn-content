@@ -1,3 +1,5 @@
+/// <reference path="./types/index.d.ts" />
+
 //Hello World!
 var myDocument = app.documents.add();
 //Create a new text frame and assign it to the variable "myTextFrame"

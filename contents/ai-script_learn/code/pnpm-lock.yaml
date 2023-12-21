@@ -1,0 +1,16 @@
+lockfileVersion: '6.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+dependencies:
+  types-for-adobe:
+    specifier: ^7.0.12
+    version: 7.0.12
+
+packages:
+
+  /types-for-adobe@7.0.12:
+    resolution: {integrity: sha512-J45QGDJYI0OjxzvxaVmDypOJD4aVSP+ElB2m2HTuVJGkYa+0ED0sNTIfmla/46c6gZBUFcDVO2EvZ3hqT5gcnw==}
+    dev: false

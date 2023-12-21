@@ -4,6 +4,11 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+dependencies:
+  types-for-adobe:
+    specifier: ^7.0.12
+    version: 7.0.12
+
 devDependencies:
   husky:
     specifier: ^8.0.3
@@ -1291,6 +1296,10 @@ packages:
       v8-compile-cache-lib: 3.0.1
       yn: 3.1.1
     dev: true
+
+  /types-for-adobe@7.0.12:
+    resolution: {integrity: sha512-J45QGDJYI0OjxzvxaVmDypOJD4aVSP+ElB2m2HTuVJGkYa+0ED0sNTIfmla/46c6gZBUFcDVO2EvZ3hqT5gcnw==}
+    dev: false
 
   /typescript@5.3.2:
     resolution: {integrity: sha512-6l+RyNy7oAHDfxC4FzSJcz9vnjTKxrLpDG5M2Vu4SHRVNg6xzqZp6LYSR9zjqQTu8DU/f5xwxUdADOkbrIX2gQ==}
