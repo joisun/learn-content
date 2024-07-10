@@ -1,0 +1,36 @@
+.steps {
+    display: flex;
+    gap: 50px;
+    color: white;
+}
+.step {
+    border-radius: 100%;
+    border: 1px solid #eee;
+    padding: 1rem;
+    width: 10px;
+    height: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.step-content {
+    margin: 2rem 1rem;
+    padding: 1rem;
+    font-size: 2rem;
+    color: white;
+}
+
+button {
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: purple;
+    color: white;
+}
+button:disabled {
+    background-color: #818181;
+}
+button.next {
+    margin-left: 100px;
+}

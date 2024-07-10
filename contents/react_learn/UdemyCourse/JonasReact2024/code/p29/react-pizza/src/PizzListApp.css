@@ -1,0 +1,21 @@
+.header{
+  color: rgb(240, 216, 0);
+  font-size: 2rem;
+  text-align: center;
+  width: 100%;
+  margin: 2rem 0;
+  display: inline-block;
+}
+.container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ddd;
+}
+.footer{
+  color: #614600;
+  font-size: 1.5rem;
+  margin: 2rem 0;
+}
