@@ -24,7 +24,7 @@
     "node-fetch": "^3.3.2",
     "ts-node": "^10.9.1",
     "vitepress": "1.0.0-rc.31",
-    "vitepress-sidebar": "^1.18.0"
+    "vitepress-sidebar": "^1.18.5"
   },
   "dependencies": {
     "types-for-adobe": "^7.0.12"
