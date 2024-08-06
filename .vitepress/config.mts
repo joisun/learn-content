@@ -42,17 +42,20 @@ export default defineConfig({
   srcDir: 'contents',
   base: "/learn-content/", //https://vitepress.dev/reference/site-config#base
   ignoreDeadLinks: true,
+  head: [
+    ['link', { rel: "icon", type: "image/svg+xml", href: "/learn-content/assets/icon.svg" }],
+  ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: 'Home', link: '/' },
       { text: 'sunzy.fun', link: 'https://sunzy.fun/' },
       { text: 'cnblog', link: 'https://www.cnblogs.com/jaycethanks/' },
-      { text: 'github.io', link: 'https://jaycethanks.github.io/' },
+      { text: 'github.io', link: 'https://joisun.github.io/' },
       {
         text: 'Tools',
         items: [
-          { text: 'Svg Convert', link: 'https://jaycethanks.github.io/demos/Others/svgConvert/dist/' },
+          { text: 'Svg Convert', link: 'https://joisun.github.io/demos/Others/svgConvert/dist/' },
         ]
       }
     ],
