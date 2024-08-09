@@ -1,5 +1,22 @@
 {
     "npm.exclude": [
         "**/contents/**"
-    ]
+    ],
+    "workbench.colorCustomizations": {
+        "tab.activeBorder": "#ff4a82",
+        "titleBar.activeBackground": "#ec2c64",
+        "titleBar.activeForeground": "#fff",
+        "titleBar.inactiveBackground": "#ec2c64",
+        "titleBar.inactiveForeground": "#fff",
+        "activityBar.background": "#ec2c64",
+        "activityBar.foreground": "#fff",
+        "activityBar.inactiveForeground": "#ffffff4D",
+        "activityBar.activeBorder": "#ffffffCC",
+        "statusBar.background": "#ec2c64",
+        "statusBar.foreground": "#fff",
+        "statusBarItem.hoverBackground": "#ffffff4D",
+        "statusBarItem.remoteBackground": "#ff4a82",
+        "statusBarItem.remoteForeground": "#fff"
+    },
+    "coralize.color": "#ec2c64"
 }

@@ -19,7 +19,7 @@ const getSideBar = (): any => {
       keepMarkdownSyntaxFromTitle: true,
       sortMenusOrderByDescending: false,
       includeRootIndexFile: false,// 包含 顶层 index.md
-      includeFolderIndexFile: false,// 包含 所有 index.md
+      includeFolderIndexFile: false,// 包含 目录下的 index.md
       useFolderTitleFromIndexFile: false,// 将当前目录中 index.md 的以及标题作为menu 名
       // sortMenusOrderNumerically: true, // 如果目录名中前面有数字，按照数字顺序排列
       sortMenusByFrontmatterOrder: true,// 如果目录下 Index.md frontmatter 中有 order 字段则按照这个字段排列, 我们仅在某个学习话题下使用这个规则
